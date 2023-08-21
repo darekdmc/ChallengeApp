@@ -1,4 +1,6 @@
-﻿namespace ChallengeApp
+﻿using ChallengeApp;
+
+namespace ChallengeApp
 {
     internal class Employee
     {
@@ -34,8 +36,24 @@
 
             statistics.Average = statistics.Average / this.grades.Count;
 
-            return statistics;
+            return statistics; //metoda zwraca obiekt z wypełnionymi statystykami (w praktyce jest to referencja).
         }
 
     }
 }
+/* Jeżeli chcemy nadpisać referencję co praktycznie nie jest wykorzystywane należy użyć "ref" lub "out". Ref oznacza, że parametr ma już przypisaną wartość w przeciwieństwie do out-a.
+ W ref-ie  parametr ma już przypisaną wartość i ta może być odczytana lub zmieniona w funkcji.
+  SetSth(ref statistics);
+void SetSth(ref Statistics statistics)
+{
+   // statistiscs = new Statistics();
+
+}
+
+Dla "out musimy od razu nadpisać wartość
+ SetSth(out statistics);
+void SetSth(out Statistics statistics)
+{
+statistiscs = new Statistics(); //musimy tutaj nadpisać parametr ponieważ wartość parametru nie jest w oucie przekazywana.
+}
+*/

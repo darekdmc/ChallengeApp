@@ -7,3 +7,4 @@
         public float Average { get; set; }
     }
 }
+//model danych
