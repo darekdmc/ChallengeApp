@@ -1,5 +1,16 @@
 ﻿using ChallengeApp;
 
+var employee = new Employee("Jan", "Kowalski");
+employee.AddGrade(2);
+employee.AddGrade(2);
+employee.AddGrade(6);
+var statistics = employee.GetStatistics();
+Console.WriteLine($"Average: {statistics.Average:N2}"); // N2 - dwa miejsca po przecinku.
+Console.WriteLine($"Min: {statistics.Min}");
+Console.WriteLine($"Max: {statistics.Max}");
+
+
+
 int[] grades = new int[5];
 /*string[] dayOfWeeks = new string[7];
 dayOfWeeks[0] = "poniedziałek";
@@ -147,20 +158,21 @@ class User
 */
 
 // !!!!!! using ChallengeApp; !!!!!!!!!!! na samej górze !!!!!!!!!!!!!!!!!!!!!!
-
-User user1 = new User("Darek", "Hasło123");
-User user2 = new User("Monika", "Hasło123");
-User user3 = new User("Zuzia", "Hasło123");
-User user4 = new User("Damian", "Hasło123");
+/*
+//  User user1 = new User("Darek", "Hasło123");
+//  User user2 = new User("Monika", "Hasło123");
+//  User user3 = new User("Zuzia", "Hasło123");
+//  User user4 = new User("Damian", "Hasło123");
 
 
 //var name = user1.Login;
 
-user1.AddScore(5);
-user1.AddScore(2);
+//  user1.AddScore(5);
+//  user1.AddScore(2);
 
-var result = user1.Result;
-Console.WriteLine(result);
+//  var result = user1.Result;
+//  Console.WriteLine(result); 
+
 /*
 var name = User.GameName;
 var pi = Math.PI;
